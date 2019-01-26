@@ -12,10 +12,13 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveVelocity;
 
     private Camera mainCamera;
+
+    public bool useController;
     
     // Start is called before the first frame update
     void Start()
     {
+        print("Start Game");
         myRigidbody = GetComponent<Rigidbody>();
         mainCamera = FindObjectOfType<Camera>();
     }
@@ -27,19 +30,54 @@ public class PlayerController : MonoBehaviour
         moveVelocity = moveInput * moveSpeed;
 
     //Point Character At Mouse Location
-        Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
-        Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
-        float rayLength; //value for this will be how far the camera is from the ground
-
-        if (groundPlane.Raycast(cameraRay, out rayLength)) //sets however far the camera is from the ground based off of 
+        if (!useController)
         {
-            Vector3 pointToLook = cameraRay.GetPoint(rayLength);
-            Debug.DrawLine(cameraRay.origin, pointToLook, Color.blue);
-            
-            transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
-        }
-    }
+            Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+            Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+            float rayLength; //value for this will be how far the camera is from the ground
 
+            if (groundPlane.Raycast(cameraRay, out rayLength)
+            ) //sets however far the camera is from the ground based off of 
+            {
+                Vector3 pointToLook = cameraRay.GetPoint(rayLength);
+                Debug.DrawLine(cameraRay.origin, pointToLook, Color.blue);
+
+                transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
+            }
+        }
+        
+    //Rotate with Right Stick Controller
+        if (useController)
+        { 
+            Vector3 playerDirection = Vector3.right * Input.GetAxis("RHorizontal") +
+                                      Vector3.forward * -Input.GetAxis("RVertical");
+
+            if (playerDirection.sqrMagnitude > 0.0f)
+            {
+                transform.rotation = Quaternion.LookRotation(playerDirection, Vector3.up);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Joystick1Button16))
+            {
+            //Interaction stuff here
+                print("A Button clicked down");
+            }           
+            if (Input.GetKeyUp(KeyCode.Joystick1Button16))
+            {
+            //Interaction stuff here
+                print("A Button clicked down");
+            }
+
+            if (Input.GetAxis("RTrigger") > 0)
+            {
+                //Interaction stuff here
+                print("Right Trigger clicked up");    
+            }
+
+        }
+        
+    }
+    
     
     // Update is always performed at the same time
     private void FixedUpdate()
