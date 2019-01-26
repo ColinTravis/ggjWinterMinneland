@@ -33,7 +33,8 @@ public class PlayerController : MonoBehaviour
 
         if (groundPlane.Raycast(cameraRay, out rayLength)) //sets however far the camera is from the ground based off of 
         {
-            
+            Vector3 pointToLook = cameraRay.GetPoint(rayLength);
+            Debug.DrawLine(cameraRay.origin, pointToLook, Color.blue);
         }
     }
 
