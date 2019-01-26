@@ -1,6 +1,6 @@
-# GGJ 2019 Winter Minneland Game ❄️ 
+# GGJ 2019 Winter Minneland ❄️ 
 
-Winter Minneland Scavenger Hunt Game by Team "The Bomb Squad" - 
+_Winter Minneland_ by Team **The Bomb Squad** - 
 A game about a stranger (you) who moves to the blizzard badlands of minneapolis and lives in a sad, grey home. explore new places, new pals, and collect new items for your home. Helping a fellow minnesotan may result in them helping you make your new home a true home. Learn the meaning of Minnesota Nice.
 
 
@@ -8,3 +8,4 @@ A game about a stranger (you) who moves to the blizzard badlands of minneapolis 
 ## Notes during development
 
 - Rigibody: What we're using to move character
+- Can be played with either an Xbox controller (not currently mapped to windows) or mouse, with intelligent switching.
