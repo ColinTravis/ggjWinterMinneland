@@ -6,6 +6,9 @@ public class dialogHolder : MonoBehaviour
 {
     public string dialogue;
     private DialogueManager dMAn;
+    public GameObject triggeringNpc;
+
+    public string[] dialogueLines;
 
     // Start is called before the first frame update
     void Start()
@@ -19,13 +22,21 @@ public class dialogHolder : MonoBehaviour
         
     }
 
-	private void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
 	{
         if(other.gameObject.name == "Player")
         {
-            if(Input.GetKeyDown(KeyCode.Space))
+            if(Input.GetKeyUp(KeyCode.Space))
             {
-                dMAn.ShowBox(dialogue);
+                //dMAn.ShowBox(dialogue);
+
+                if(!dMAn.dialogActive)
+                {
+                    dMAn.dialogLines = dialogueLines;
+                    dMAn.currentLine = 0;
+                    dMAn.ShowDialogue();
+                    Destroy(triggeringNpc);
+                }
             }
         }
 	}

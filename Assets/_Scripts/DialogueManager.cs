@@ -11,6 +11,9 @@ public class DialogueManager : MonoBehaviour
 
     public bool dialogActive;
 
+    public string[] dialogLines;
+    public int currentLine;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +23,22 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (dialogActive && Input.GetKeyDown(KeyCode.Space))
+        if(dialogActive && Input.GetKeyUp(KeyCode.Space))
     {
-        dBox.SetActive(false);
-            dialogActive = false;
+            //dBox.SetActive(false);
+            //dialogActive = false;
+
+            currentLine++;
     }
+        if(currentLine >= dialogLines.Length)
+        {
+            dBox.SetActive(false);
+            dialogActive = false;
+
+            currentLine = 0;
+        }
+
+        dText.text = dialogLines[currentLine];
     
     }
 
@@ -33,5 +47,11 @@ public class DialogueManager : MonoBehaviour
         dialogActive = true;
         dBox.SetActive(true);
         dText.text = dialogue; 
+    }
+
+    public void ShowDialogue()
+    {
+        dialogActive = true;
+        dBox.SetActive(true);
     }
 }
