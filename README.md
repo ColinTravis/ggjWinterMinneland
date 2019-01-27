@@ -26,4 +26,3 @@ We're currently making this game that's about finding and helping citizens in ne
 - block out city
 - Texture city (some colors?)
 - More characters
-- Pause character during dialogue
