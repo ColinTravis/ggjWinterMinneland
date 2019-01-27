@@ -35,7 +35,6 @@ public class dialogHolder : MonoBehaviour
                     dMAn.dialogLines = dialogueLines;
                     dMAn.currentLine = 0;
                     dMAn.ShowDialogue();
-                    Destroy(triggeringNpc);
                 }
             }
         }
