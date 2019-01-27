@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc76038d909944cc5bf4ad6702aa6d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMapScene: mainMap
+  mainMapScene: mainLevel
 --- !u!1 &1091481622
 GameObject:
   m_ObjectHideFlags: 0
