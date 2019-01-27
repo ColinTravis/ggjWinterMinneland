@@ -18,10 +18,13 @@ public class DialogueManager : MonoBehaviour
     public string[] dialogLines;
     public int currentLine;
 
+    private PlayerController thePlayer;
+
     // Start is called before the first frame update
     void Start()
     {
         dHolder = FindObjectOfType<dialogHolder>();
+        thePlayer = FindObjectOfType<PlayerController>();
         spwnNPC = FindObjectOfType<RespawnNPC>();
     }
 
@@ -42,6 +45,7 @@ public class DialogueManager : MonoBehaviour
 
             // Tells us the dialogue is finished, rather than just reset.
             dHolder.dialogueFinished = true;
+            thePlayer.canMove = true;
             spwnNPC.MoveNPC();
         }
 
@@ -51,6 +55,7 @@ public class DialogueManager : MonoBehaviour
 
     public void ShowDialogue()
     {
+        thePlayer.canMove = false;
         dialogActive = true;
         dBox.SetActive(true);
     }
