@@ -16,4 +16,3 @@ A game about a stranger (you) who moves to the blizzard badlands of minneapolis 
 - Make main menu pretty
 - block out city
 - Pause character during dialogue
-- spawn character hub

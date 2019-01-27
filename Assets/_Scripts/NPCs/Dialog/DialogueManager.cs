@@ -10,6 +10,8 @@ public class DialogueManager : MonoBehaviour
     public Text dText;
 
     private dialogHolder dHolder;
+    
+    private RespawnNPC spwnNPC;
 
     public bool dialogActive;
 
@@ -20,6 +22,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         dHolder = FindObjectOfType<dialogHolder>();
+        spwnNPC = FindObjectOfType<RespawnNPC>();
     }
 
     void Update()
@@ -36,9 +39,10 @@ public class DialogueManager : MonoBehaviour
             dialogActive = false;
 
             currentLine = 0;
-            dHolder.dialogueFinished = true;
-            dHolder.DestroyNPC();
 
+            // Tells us the dialogue is finished, rather than just reset.
+            dHolder.dialogueFinished = true;
+            spwnNPC.MoveNPC();
         }
 
         dText.text = dialogLines[currentLine];

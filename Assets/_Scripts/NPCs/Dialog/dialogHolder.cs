@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class dialogHolder : MonoBehaviour
 {
-    public string dialogue;
     private DialogueManager dMAn;
+
     
     public GameObject triggeringNpc;
     
@@ -42,6 +42,8 @@ public class dialogHolder : MonoBehaviour
         }
 	}
 
+    
+    // Call to destroy NPC
     public void DestroyNPC()
     {
         if (dialogueFinished == true)
