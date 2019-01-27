@@ -3,7 +3,7 @@
 _Winter Minneland_ by Team **The Bomb Squad** - 
 A game about a stranger (you) who moves to the blizzard badlands of minneapolis and lives in a sad, grey home. explore new places, new pals, and collect new items for your home. Helping a fellow minnesotan may result in them helping you make your new home a true home. Learn the meaning of Minnesota Nice.
 
---
+---
 
 ### Hi, we're The Bomb Squad 💣 👀
 ![We look good.](https://ggj.s3.amazonaws.com/styles/game_sidebar__wide/team_picture/2019/01/249853/50883632_615813935542897_1103321989617025024_n.jpg?itok=89OE9dwQ&timestamp=1548530851)
