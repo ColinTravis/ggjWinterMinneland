@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/_Scenes/mainMap.unity
     guid: c41e7b4f570de4d0da2ddad60126b17b
   - enabled: 1
-    path: Assets/_Scenes/MainMenu.unity
+    path: Assets/_Scenes/Mdialogie.unity
     guid: 6364c9187b0d54ea893eb976f1a663f6
   m_configObjects: {}
