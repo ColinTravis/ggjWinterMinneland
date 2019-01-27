@@ -57,21 +57,10 @@ public class PlayerController : MonoBehaviour
                 transform.rotation = Quaternion.LookRotation(playerDirection, Vector3.up);
             }
 
-            if (Input.GetKeyDown(KeyCode.Joystick1Button16))
-            {
-            //Interaction stuff here
-                print("A Button clicked down");
-            }           
-            if (Input.GetKeyUp(KeyCode.Joystick1Button16))
-            {
-            //Interaction stuff here
-                print("A Button clicked down");
-            }
-
             if (Input.GetAxis("RTrigger") > 0)
             {
                 //Interaction stuff here
-                print("Right Trigger clicked up");    
+//                print("Right Trigger clicked up");    
             }
 
         }

@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class dialogHolder : MonoBehaviour
 {
-    public string dialogue;
     private DialogueManager dMAn;
-    public GameObject triggeringNpc;
 
+    
+    public GameObject triggeringNpc;
+    
     public string[] dialogueLines;
+
+    public bool dialogueFinished;
 
     // Start is called before the first frame update
     void Start()
@@ -19,16 +22,15 @@ public class dialogHolder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnTriggerStay(Collider other)
 	{
         if(other.gameObject.name == "Player")
         {
-            if(Input.GetKeyUp(KeyCode.Space))
+            if(Input.GetKeyUp(KeyCode.F) || Input.GetKeyDown(KeyCode.Joystick1Button16))
             {
-                //dMAn.ShowBox(dialogue);
 
                 if(!dMAn.dialogActive)
                 {
@@ -39,4 +41,16 @@ public class dialogHolder : MonoBehaviour
             }
         }
 	}
+
+    
+    // Call to destroy NPC
+    public void DestroyNPC()
+    {
+        if (dialogueFinished == true)
+        {
+            Destroy(triggeringNpc);
+            
+            dialogueFinished = false;
+        }
+    }
 }
