@@ -9,3 +9,12 @@ A game about a stranger (you) who moves to the blizzard badlands of minneapolis 
 
 - Rigibody: What we're using to move character
 - Can be played with either an Xbox controller (not currently mapped to windows) or mouse, with intelligent switching.
+- Added a pause menu/main menu
+
+## To do:
+
+- Make main menu pretty
+- block out city
+- Pause character during dialogue
+- Destroy character after dialogue
+- spawn character hub
