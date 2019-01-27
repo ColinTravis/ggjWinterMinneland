@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Mdialogie.unity
     guid: 6364c9187b0d54ea893eb976f1a663f6
+  - enabled: 1
+    path: Assets/_Scenes/MainMenu.unity
+    guid: 558701b99051c4ccd81946d928487335
   m_configObjects: {}

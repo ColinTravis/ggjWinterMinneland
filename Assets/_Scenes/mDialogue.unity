@@ -412,7 +412,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159961196}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11f9e9adcabf24b7b994e23bad6d1cea, type: 3}
   m_Name: 
@@ -420,6 +420,8 @@ MonoBehaviour:
   dBox: {fileID: 2087016863}
   dText: {fileID: 1058279167}
   dialogActive: 1
+  dialogLines: []
+  currentLine: 0
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,7 +1257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d066651515ec4fba976713b401b3de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcText: {fileID: 5566388}
 --- !u!1 &1058279165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,10 +1743,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1783343454, guid: bbb02ff2b7d4b45378e8e55166d1ba6f, type: 3}
-      propertyPath: moveSpeed
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 8305818217613606237, guid: bbb02ff2b7d4b45378e8e55166d1ba6f,
         type: 3}
       propertyPath: m_RootOrder
@@ -1765,6 +1762,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1783343454, guid: bbb02ff2b7d4b45378e8e55166d1ba6f, type: 3}
+      propertyPath: moveSpeed
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1783343454, guid: bbb02ff2b7d4b45378e8e55166d1ba6f, type: 3}
