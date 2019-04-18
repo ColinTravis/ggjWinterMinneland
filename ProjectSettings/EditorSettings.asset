@@ -5,7 +5,7 @@ EditorSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 7
   m_ExternalVersionControlSupport: Visible Meta Files
-  m_SerializationMode: 2
+  m_SerializationMode: 26
   m_LineEndingsForNewScripts: 2
   m_DefaultBehaviorMode: 0
   m_PrefabRegularEnvironment: {fileID: 0}
@@ -15,9 +15,9 @@ EditorSettings:
   m_EtcTextureCompressorBehavior: 1
   m_EtcTextureFastCompressor: 1
   m_EtcTextureNormalCompressor: 2
-  m_EtcTextureBestCompressor: 4
+  m_EtcTextureBestCompressor: 6
   m_ProjectGenerationIncludedExtensions: txt;xml;fnt;cd;asmdef
   m_ProjectGenerationRootNamespace: 
   m_CollabEditorSettings:
-    inProgressEnabled: 1
+    inProgressEnabled: 5
   m_EnableTextureStreamingInPlayMode: 1
